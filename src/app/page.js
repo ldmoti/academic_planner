@@ -2,9 +2,13 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-black-100">
-      <h1 className="text-4xl font-bold mb-4">Welcome to Academic Planner</h1>
-      <p className="text-lg mb-8">Plan your academic tasks and events efficiently.</p>
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 dark:bg-gray-900">
+      <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
+        Welcome to Academic Planner
+      </h1>
+      <p className="text-lg mb-8 text-gray-700 dark:text-gray-300">
+        Plan your academic tasks and events efficiently.
+      </p>
       <div className="flex gap-4">
         <Link
           href="/auth/login"

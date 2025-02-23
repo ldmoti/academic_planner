@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from "@/context/AuthContext";
+import DarkModeToggle from "@/components/DarkModeToggle";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,7 +23,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      ><AuthProvider>{children}</AuthProvider>
+      ><AuthProvider><div className="fixed top-4 right-4">
+      <DarkModeToggle />
+    </div>{children}</AuthProvider>
         
       </body>
     </html>
